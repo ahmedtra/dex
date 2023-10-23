@@ -30,12 +30,16 @@ contract Scheduler {
         
         if (block.timestamp > nextTimestamp){
             nextTimestamp = getNextHourTimestamp();
-            clock += 1; 
+            updateClock();
             return true;
         } 
         return false;
     }
 
+    function updateClock() public {
+        clock +=1;
+    }
+    }
+
 
     
-}

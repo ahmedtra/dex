@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 
 library Math {
 
-    uint256 constant decimals = 100000000;
+    uint256 constant decimals = 10**8;
 
     function getAbsoluteValue(int256 num) public pure returns (int256) {
         if (num < 0) {

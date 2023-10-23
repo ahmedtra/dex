@@ -111,6 +111,8 @@ contract PerpDEX is Quoting, Margin, Oracles, Book, Transfers, Scheduler{
         } else {
             balances[msg.sender] = uint256(int256(balances[msg.sender]) + settlePnl);
         }
+
+
     }
 
     function checkMargin(address _trader) public {
@@ -137,6 +139,7 @@ contract PerpDEX is Quoting, Margin, Oracles, Book, Transfers, Scheduler{
         for (uint256 i = 0; i< traders.length ; i++){
             settlePosition(traders[i]);
         }
+        updatePrice(assetPrice / Math.decimals);
     }
 
 }

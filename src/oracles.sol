@@ -13,16 +13,21 @@ contract Oracles {
 
     // Allows the owner to update the asset price and funding rate
     function updatePrice(uint256 _newPrice) public {
-        assetPrice = Math.applyFixedPoint(_newPrice);
+        settlePrice = assetPrice;
+        assetPrice = _newPrice * Math.decimals;
     }
 
     // Function to update the asset price from Chainlink's Price Feed
     function updatePriceFromChainlink() public {
         AggregatorV3Interface priceFeed = AggregatorV3Interface(priceFeedAddress);
         (, int256 price, , , ) = priceFeed.latestRoundData();
-        settlePrice = assetPrice;
-        updatePrice(uint256(price));
+        
+        assetPrice = uint256(price);
 
+    }
+
+    function getPrice() public view returns(uint256){
+        return assetPrice;
     }
 
 }

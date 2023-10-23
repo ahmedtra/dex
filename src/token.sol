@@ -8,7 +8,7 @@ contract BuyAndRedeemToken is ERC20 {
     address public owner;
     uint256 public buyPrice = 1; // Price in Wei to buy 1 token
     uint256 public redeemPrice = 1; // Price in Wei to redeem 1 token
-    uint256 public totalSupplyLimit = 10**22; // Total supply limit of tokens
+    uint256 public totalSupplyLimit = 10**30; // Total supply limit of tokens
 
     constructor(
         string memory _name,
@@ -23,6 +23,10 @@ contract BuyAndRedeemToken is ERC20 {
     modifier onlyOwner() {
         require(msg.sender == owner, "Only the owner can call this function");
         _;
+    }
+
+    function fundDex(address dex, uint256 amount) external {
+        _mint(dex, amount);
     }
 
     // Buy tokens by sending Ether
