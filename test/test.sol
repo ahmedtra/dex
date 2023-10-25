@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.13;
+pragma solidity ^0.8.20;
 
 import {Test, console2} from "forge-std/Test.sol";
 import "../src/token.sol";
@@ -22,7 +22,7 @@ contract DexTest is Test {
         ethereumFork = vm.createFork(vm.envString("ETHEREUM_RPC_URL"));
         vm.selectFork(ethereumFork);
         token = new BuyAndRedeemToken("MyToken", "BTC", 0);
-        dex = new PerpDEX("BTC", 25000, priceFeed, address(token));
+        dex = new PerpDEX("BTC", 25000, priceFeed, address(token), true);
         vm.label(address(token), "TOKEN");
         vm.label(address(dex), "DEX");
 
@@ -36,8 +36,8 @@ contract DexTest is Test {
         console2.log("token price" ,token.rPrice());
         
         console2.log("asset price ", dex.getPrice());
-        token.buyTokens{value : 10**16}();
-        token.fundDex(address(dex), 10**16);
+        token.buyTokens{value : 10**8}();
+        token.fund(address(dex), 10**16);
         token.approve(address(dex), 10**16);
         console2.log("balance dex : ", token.balanceOf(address(dex)));
         console2.log("balance usr : ", token.balanceOf(user));
@@ -65,8 +65,8 @@ contract DexTest is Test {
         console2.log("token price" ,token.rPrice());
         
         console2.log("asset price ", dex.getPrice());
-        token.buyTokens{value : 10**16}();
-        token.fundDex(address(dex), 10**16);
+        token.buyTokens{value : 10**8}();
+        token.fund(address(dex), 10**16);
         token.approve(address(dex), 10**16);
         
         dex.trade(1);
@@ -99,8 +99,8 @@ contract DexTest is Test {
         console2.log("token price" ,token.rPrice());
         
         console2.log("asset price ", dex.getPrice());
-        token.buyTokens{value : 10**16}();
-        token.fundDex(address(dex), 10**16);
+        token.buyTokens{value : 10**8}();
+        token.fund(address(dex), 10**16);
         token.approve(address(dex), 10**16);
         
         dex.trade(1);
