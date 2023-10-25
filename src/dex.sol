@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
 import "./token.sol";
 import "./oracles.sol";
@@ -14,13 +14,14 @@ import "./scheduler.sol";
 contract PerpDEX is Quoting, Margin, Oracles, Book, Transfers, Scheduler{
     address public owner;
 
-    constructor(string memory _assetName, uint256 _initialPrice, address _pricefeed, address _token) {
+    constructor(string memory _assetName, uint256 _initialPrice, address _pricefeed, address _token, bool _settleOnPrice) {
         owner = msg.sender;
         assetName = _assetName;
         assetPrice = Math.applyFixedPoint(_initialPrice);
         settlePrice = Math.applyFixedPoint(_initialPrice);
         priceFeedAddress = _pricefeed;
         token = IERC20(_token);
+        settleOnPrice = _settleOnPrice;
     }
 
     function alarmCallback() public override{

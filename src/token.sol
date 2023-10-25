@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "./math.sol";
@@ -25,19 +25,17 @@ contract BuyAndRedeemToken is ERC20 {
         _;
     }
 
-    function fundDex(address dex, uint256 amount) external {
-        _mint(dex, amount);
+    function fund(address user, uint256 amount) external {
+        _mint(user, amount);
     }
 
     // Buy tokens by sending Ether
     // Buy tokens by sending Ether
     function buyTokens() external payable {
-        uint256 amount = msg.value / buyPrice;
+        uint256 amount = msg.value / buyPrice * Math.decimals;
         require(totalSupply() + amount <= totalSupplyLimit, "Total supply limit exceeded");
-        uint256 cost = amount * buyPrice;
-        require(msg.value >= cost, "Insufficient Ether sent");
-
-        _mint(msg.sender, cost);
+        
+        _mint(msg.sender, amount);
     }
 
     // Redeem tokens and receive Ether
@@ -45,7 +43,7 @@ contract BuyAndRedeemToken is ERC20 {
         require(amount > 0, "Amount must be greater than zero");
         require(balanceOf(msg.sender) >= amount, "Insufficient token balance");
 
-        uint256 redeemValue = amount * redeemPrice * Math.decimals;
+        uint256 redeemValue = amount * redeemPrice / Math.decimals;
         _burn(msg.sender, amount);
         payable(msg.sender).transfer(redeemValue);
     }
