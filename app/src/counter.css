@@ -1,0 +1,480 @@
+@media screen and (max-width: 499px) {
+  
+  
+  .cs{
+    font-family: 'Passion One', cursive;
+    margin-top: 20px;
+    -webkit-text-stroke: #000000 2px;
+    color: white;
+    font-size: 30px;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
+  }
+
+  .dots{
+    color: gray;
+    display: flex;
+    align-items: center;
+  }
+  
+  .counterBlock{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;        
+      }
+    
+      .countdown{
+        text-align: center;
+        color: black;
+        padding: 30px;
+        font-size: 20px;
+       }
+    
+    .days{
+        border: 6px solid #7c7c7c;
+        border-top-color: #fff;
+        border-left-color: #fff;
+        background-color: #c0c0c0;
+        box-shadow: 5px 5px black;
+        padding: 10px;
+         
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        margin-right: 5px;
+        margin-left: 5px;
+    
+    }
+    .sec{
+        animation: 1s 0.875s infinite timer_beat;
+        border: 6px solid #7c7c7c;
+        border-top-color: #fff;
+        border-left-color: #fff;
+        background-color: #c0c0c0c9;
+        box-shadow: 5px 5px black;
+        padding: 10px;
+       
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        margin-left: 5px;
+    
+    }
+      
+    @keyframes timer_beat {
+      0% {
+        transform: scale(1.125); 
+      }
+      50% {
+        transform: none; }
+       }
+}
+
+@media screen and (min-width: 500px) and (max-width: 767px) {
+   
+  .cs{
+    font-family: 'Passion One', cursive;
+    margin-top: 20px;
+    -webkit-text-stroke: #000000 2px;
+    color: white;
+    font-size: 40px;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
+  }
+ 
+  .dots{
+    color: gray;
+    display: flex;
+    align-items: center;
+  }
+  
+  .counterBlock{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        
+      }
+    
+      .countdown{
+        text-align: center;
+        color: black;
+        padding: 30px;
+        font-size: 25px;
+        margin-bottom: 20%;
+
+      }
+    
+      .days{
+       
+        border: 6px solid #7c7c7c;
+        border-top-color: #fff;
+        border-left-color: #fff;
+        background-color: #c0c0c0;
+        box-shadow: 5px 5px black;
+        width: 100px;
+        height: 100px;
+        padding-top: 25px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
+        color: black;
+          
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          margin-right: 5px;
+          margin-left: 5px;
+  
+      }
+      .sec{
+          animation: 1s 0.875s infinite timer_beat;
+         
+          border: 6px solid #7c7c7c;
+          border-top-color: #fff;
+          border-left-color: #fff;
+          background-color: #c0c0c0c9;
+          box-shadow: 5px 5px black;
+          width: 100px;
+          height: 100px;
+          padding-top: 25px;
+          padding-bottom: 20px;
+          padding-right: 20px;
+          padding-left: 20px;
+          
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          margin-left: 5px;
+      
+      }
+      
+    @keyframes timer_beat {
+      0% {
+        transform: scale(1.125); 
+      }
+      50% {
+        transform: none; }
+       }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+      
+  .cs{
+    font-family: 'Passion One', cursive;
+    margin-top: 20px;
+    -webkit-text-stroke: #000000 2px;
+    color: white;
+    font-size: 50px;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
+  }
+  
+  .dots{
+    color: gray;
+    display: flex;
+    align-items: center;
+  }
+  .counterBlock{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        
+      }
+    
+      .countdown{
+        text-align: center;
+        color: black;
+        padding: 30px;
+        font-size: 35px;
+       }
+    
+      .days{
+       
+        border: 6px solid #7c7c7c;
+        border-top-color: #fff;
+        border-left-color: #fff;
+        background-color: #c0c0c0;
+        box-shadow: 5px 5px black;
+        width: 150px;
+        height: 150px;
+        padding-top: 50px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 25px;
+        color: black;
+          
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          margin-right: 5px;
+          margin-left: 5px;
+  
+      }
+      .sec{
+          animation: 1s 0.875s infinite timer_beat;
+         
+          border: 6px solid #7c7c7c;
+          border-top-color: #fff;
+          border-left-color: #fff;
+          background-color: #c0c0c0c9;
+          box-shadow: 5px 5px black;
+          width: 150px;
+          height: 150px;
+          padding-top: 50px;
+          padding-bottom: 20px;
+          padding-right: 20px;
+          padding-left: 25px;
+          
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          margin-left: 5px;
+      
+      }
+      
+    @keyframes timer_beat {
+      0% {
+        transform: scale(1.125); 
+      }
+      50% {
+        transform: none; }
+       }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+ 
+   
+  .cs{
+    font-family: 'Passion One', cursive;
+    margin-top: 20px;
+    -webkit-text-stroke: #000000 2px;
+    color: white;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
+  }
+  .dots{
+    color: gray;
+    display: flex;
+    align-items: center;
+  }
+
+  .counterBlock{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    
+      .countdown{
+        text-align: center;
+        color: black;
+        font-size: 60px;
+      }
+
+      
+      .dots{
+        color: gray;
+        display: flex;
+        align-items: center;
+      }
+    
+      .days{
+       
+        border: 6px solid #7c7c7c;
+        border-top-color: #fff;
+        border-left-color: #fff;
+        background-color: #c0c0c0;
+        box-shadow: 5px 5px black;
+        width: 170px;
+        height: 170px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 25px;
+        color: black;
+          
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          margin-right: 5px;
+          margin-left: 5px;
+  
+      }
+      .sec{
+          animation: 1s 0.875s infinite timer_beat;
+         
+        border: 6px solid #7c7c7c;
+        border-top-color: #fff;
+        border-left-color: #fff;
+        background-color: #c0c0c0c9;
+        box-shadow: 5px 5px black;
+        width: 170px;
+        height: 170px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 25px;
+          
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          margin-left: 5px;
+      
+      }
+      
+    @keyframes timer_beat {
+      0% {
+        transform: scale(1.125); 
+      }
+      50% {
+        transform: none; }
+       }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1919px) {
+
+  .cs{
+    font-family: 'Passion One', cursive;
+    margin-top: 20px;
+    -webkit-text-stroke: #000000 2px;
+    color: white;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
+  }
+
+  .counterBlock{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    
+      .countdown{
+        text-align: center;
+        color: black;
+        font-size: 60px;     
+       }
+      
+      .dots{
+        color: gray;
+        display: flex;
+        align-items: center;
+      }
+    
+    .days{
+     
+      border: 6px solid #7c7c7c;
+      border-top-color: #fff;
+      border-left-color: #fff;
+      background-color: #c0c0c0;
+      box-shadow: 5px 5px black;
+      width: 170px;
+      height: 170px;
+      padding-top: 40px;
+      padding-bottom: 20px;
+      padding-right: 20px;
+      padding-left: 25px;
+      color: black;
+        
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        margin-right: 5px;
+        margin-left: 5px;
+
+    }
+    .sec{
+        animation: 1s 0.875s infinite timer_beat;
+       
+      border: 6px solid #7c7c7c;
+      border-top-color: #fff;
+      border-left-color: #fff;
+      background-color: #c0c0c0c9;
+      box-shadow: 5px 5px black;
+      width: 170px;
+      height: 170px;
+      padding-top: 40px;
+      padding-bottom: 20px;
+      padding-right: 20px;
+      padding-left: 25px;
+        
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        margin-left: 5px;
+    
+    }
+      
+    @keyframes timer_beat {
+      0% {
+        transform: scale(1.125); 
+      }
+      50% {
+        transform: none; }
+       }
+}
+
+@media screen and (min-width: 1920px) {
+  
+  .cs{
+    font-family: 'Passion One', cursive;
+    margin-top: 20px;
+    -webkit-text-stroke: #000000 2px;
+    color: white;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0.3);
+  }
+
+  .dots{
+    color: gray;
+    display: flex;
+    align-items: center;
+  }
+
+  .counterBlock{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        
+      }
+    
+      .countdown{
+        text-align: center;
+        color: black;
+        font-size: 80px;
+
+      }
+    
+      .days{
+       
+        border: 8px solid #7c7c7c;
+        border-top-color: #fff;
+        border-left-color: #fff;
+        background-color: #c0c0c0;
+        box-shadow: 7px 7px black;
+        width: 250px;
+        height: 250px;
+        padding-top: 67px;
+        padding-bottom: 20px;
+        padding-right: 20px;
+        padding-left: 25px;
+        color: black;
+          
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          margin-right: 5px;
+          margin-left: 5px;
+  
+      }
+      .sec{
+          animation: 1s 0.875s infinite timer_beat;
+         
+          border: 8px solid #7c7c7c;
+          border-top-color: #fff;
+          border-left-color: #fff;
+          background-color: #c0c0c0c9;
+          box-shadow: 7px 7px black;
+          width: 250px;
+          height: 250px;
+          padding-top: 67px;
+          padding-bottom: 20px;
+          padding-right: 20px;
+          padding-left: 25px;
+          
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          margin-left: 5px;
+      
+      }
+      
+    @keyframes timer_beat {
+      0% {
+        transform: scale(1.125); 
+      }
+      50% {
+        transform: none; }
+       }
+}
